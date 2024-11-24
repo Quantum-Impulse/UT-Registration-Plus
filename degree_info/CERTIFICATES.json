@@ -1,0 +1,25 @@
+{
+  "Elements of Computing": {
+    "Version": "2022-24",
+    "Core Courses": {
+      "Hours": "6",
+      "Course Options": ["C S 303E", "C S 313E"]
+    },
+    "Electives": {
+      "Hours": "12",
+      "Course Options": ["C S 323E", "C S 324E", "C S 326E", "C S 327E", "C S 329E", " C S 330E",
+      "C S 331E"]
+    }
+  },
+  "Quantum Information Science": {
+    "Version": "2022-24",
+    "Core Courses": {
+      "Hours": "6",
+      "Course Options": ["C S 309.1", "C S 378.1", "C S 358H"]
+    },
+    "Electives": {
+      "Hours": "12",
+      "Course Options": ["PHY 373", "PHY 362K", "C S 331", "C S 358H", "M 340L", "M 346", "PHY 371C", "C S 370", "M 375C"]
+    }
+  }
+}
