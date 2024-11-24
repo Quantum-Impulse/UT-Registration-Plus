@@ -26,7 +26,6 @@ export default function Chatbot(): JSX.Element {
             'AstraCS:DyHaWSMFOpQMUpHnQtXRWIjZ:4b9a0694663749a1fba22300a9fcb8adcb6b7772027208943b9b300ea3e6a3c3';
 
         if (flowIdOrName && langflowId && applicationToken) {
-            console.log('LangflowClient parameters are valid.');
             const client = new LangflowClient(
                 'https://api.langflow.astra.datastax.com',
                 applicationToken,
@@ -34,26 +33,22 @@ export default function Chatbot(): JSX.Element {
             );
             console.log('LangflowClient created:', client);
             setLangflowClient(client);
-            console.log("LangflowClient initialized:", client);
-
         } else {
             console.error('Required parameters for LangflowClient are missing.');
         }
     }, []);
 
+    // Handle sending messages
     const handleSendMessage = async () => {
         if (!langflowClient) {
-            console.error('LangflowClient is not initialized');
+            console.error('LangflowClient is not initialized.');
             return;
         }
 
         const userMessage = inputValue.trim();
-        if (userMessage === '') {
-            return;
-        }
+        if (userMessage === '') return;
 
-        // Update the messages with the user's message
-        setMessages([...messages, { sender: 'user', text: userMessage }]);
+        setMessages(prevMessages => [...prevMessages, { sender: 'user', text: userMessage }]);
         setInputValue('');
         setIsLoading(true);
 
@@ -75,9 +70,10 @@ export default function Chatbot(): JSX.Element {
                 'File-M3Krg': {},
             };
 
+            console.log('Sending user message:', userMessage);
             const response = await langflowClient.runFlow(
-                langflowClient.flowIdOrName as string, // Type assertion
-                langflowClient.langflowId as string, // Type assertion
+                langflowClient.flowIdOrName,
+                langflowClient.langflowId,
                 userMessage,
                 inputType,
                 outputType,
@@ -85,22 +81,24 @@ export default function Chatbot(): JSX.Element {
                 stream,
                 data => {
                     const botMessage = data.chunk;
+                    console.log('Streaming bot response:', botMessage);
                     setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: botMessage }]);
                 },
                 message => {
-                    console.log('Stream Closed:', message);
+                    console.log('Stream closed:', message);
                     setIsLoading(false);
                 },
                 error => {
-                    console.error('Stream Error:', error);
+                    console.error('Stream error:', error);
                     setIsLoading(false);
                 }
             );
 
             if (!stream && response && response.outputs) {
                 const flowOutputs = response.outputs[0];
-                if (flowOutputs.outputs && flowOutputs.outputs.message) {
+                if (flowOutputs.outputs?.message) {
                     const botMessage = flowOutputs.outputs.message.text;
+                    console.log('Bot response:', botMessage);
                     setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: botMessage }]);
                 } else {
                     console.error('No message in flow outputs:', flowOutputs);
@@ -108,10 +106,9 @@ export default function Chatbot(): JSX.Element {
             } else {
                 console.error('Non-streaming response failed:', response);
             }
-
-            setIsLoading(false);
         } catch (error) {
             console.error('Error sending message:', error);
+        } finally {
             setIsLoading(false);
         }
     };
@@ -148,13 +145,8 @@ export default function Chatbot(): JSX.Element {
                             <input
                                 type='text'
                                 value={inputValue}
-<<<<<<< Updated upstream
-                                onChange={(e) => setInputValue(e.target.value)}
-                                onKeyUp={(e) => {
-=======
                                 onChange={e => setInputValue(e.target.value)}
-                                onKeyPress={e => {
->>>>>>> Stashed changes
+                                onKeyUp={e => {
                                     if (e.key === 'Enter') {
                                         e.preventDefault();
                                         handleSendMessage();
@@ -162,7 +154,9 @@ export default function Chatbot(): JSX.Element {
                                 }}
                                 className='flex-grow'
                             />
-                            <button className="chatbot-send-button" onClick={handleSendMessage}>Send</button>
+                            <button className='chatbot-send-button' onClick={handleSendMessage}>
+                                Send
+                            </button>
                         </div>
                     </div>
                 </div>
