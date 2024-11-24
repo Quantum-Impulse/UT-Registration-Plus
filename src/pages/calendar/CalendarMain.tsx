@@ -8,6 +8,8 @@ import { MessageListener } from 'chrome-extension-toolkit';
 import useKC_DABR_WASM from 'kc-dabr-wasm';
 import React, { useEffect } from 'react';
 
+import TabView from '@views/components/calendar/TabView';
+
 /**
  * Calendar page
  * @returns entire page
@@ -34,7 +36,7 @@ export default function CalendarMain() {
             <ExtensionRoot className='h-full w-full'>
                 <DialogProvider>
                     <MigrationDialog />
-                    <Calendar />
+                    <TabView />
                 </DialogProvider>
             </ExtensionRoot>
         </SentryProvider>
