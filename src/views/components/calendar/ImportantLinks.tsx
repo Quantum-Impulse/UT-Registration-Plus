@@ -42,6 +42,10 @@ const links: LinkItem[] = [
         text: 'Degree Audit',
         url: 'https://utdirect.utexas.edu/apps/degree/audits/',
     },
+    {
+        text: "AI Advisor Assitant",
+        url: "https://www.example.com/page.html"
+    }
 ];
 
 /**
