@@ -1,0 +1,29 @@
+.chatbot-container {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8; /* Set a nicer background */
+}
+
+.chatbot-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.chatbot-send-button {
+    background-color: #ff5722; /* Customize button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot-send-button:hover {
+    background-color: #ff7043; /* Hover effect */
+}

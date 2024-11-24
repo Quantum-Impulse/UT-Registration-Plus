@@ -5,6 +5,8 @@ import CalendarHeader from '@views/components/calendar/CalendarHeader';
 // same w chatbot
 // import Chatbot from '@views/components/chatbot/Chatbot';
 import Chatbot from '@views/components/calendar/Chatbot';
+import LangflowBot from '@views/components/calendar/LangflowBot'
+import LangflowClient from './LangFlow';
 
 import { Button } from '@views/components/common/Button';
 import '@views/components/calendar/TabView.css';
@@ -31,7 +33,7 @@ const TabView = () => {
             {/* Tab Content */}
             <div className='tab-content'>
                 {activeTab === 'calendar' && <Calendar />}
-                {activeTab === 'chatbot' && <Chatbot />}
+                {activeTab === 'chatbot' && <LangflowClient />}
                 {/* {activeTab === 'chatbot' && (
                     <iframe
                         src="https://llama2.streamlit.app?embed=true"
