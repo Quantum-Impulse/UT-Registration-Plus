@@ -1,0 +1,375 @@
+{
+    "Degree_Plans": {
+        "Core Curriculum": {
+            "First Year Signature Course": {
+                "Hours": "3",
+                "Course Options": []
+            },
+            "English Composition": {
+                "Hours": "3",
+                "Course Options": []
+            },
+            "Humanities": {
+                "Hours": "3",
+                "Course Options": []
+            },
+            "American & Texas Government": {
+                "Hours": "6",
+                "Course Options": []
+            },
+            "American History": {
+                "Hours": "6",
+                "Course Options": []
+            },
+            "Social & Behavioral Science": {
+                "Hours": "3",
+                "Course Options": []
+            },
+            "Mathematics": {
+                "Hours": "0",
+                "Course Options": []
+            },
+            "Science & Technology-I": {
+                "Hours": "0",
+                "Course Options": []
+            },
+            "Science & Technology-II": {
+                "Hours": "0",
+                "Course Options": []
+            },
+            "Visual & Performing Arts": {
+                "Hours": "3",
+                "Course Options": []
+            }
+        },
+
+        "Statistics and Data Science": {
+            "Degree": "Bachelor of Science",
+            "Version": "2022-24",
+            "Skills & Experience Flags": {
+                "Writing Flag": {
+                    "Count": "2",
+                    "Courses": []
+                },
+                "Quantitative Reasoning Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Global Cultures Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Cultural Diversity in the U.S. Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Ethics and Leadership Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Independent Inquiry Flag": {
+                    "Count": "1",
+                    "Courses": []
+                }
+            },
+            "Introductory Science": {
+                "Calculus": {
+                    "Hours": "8-12",
+                    "Course Options": [
+                        ["M 408C", "M 408D"],
+                        ["M 408K", "M 408L", "M 408M"],
+                        ["M 408N", "M 408S", "M 408M"]
+                    ]
+                },
+                "Linear algebra": {
+                    "Hours": "3",
+                    "Course Options": [["M 340L"], ["M 341"]]
+                },
+                "Introduction to programming": {
+                    "Hours": "3",
+                    "Course Options": [["C S 303E"], ["C S 312"], ["an equivalent C S course"]]
+                },
+                "Introduction to databases": {
+                    "Hours": "3",
+                    "Course Options": [["C S 327E"], ["an equivalent C S course"]]
+                }
+            },
+            "Breadth Requirement": {
+                "Single Field of Study Other Than SDS": {
+                    "Hours": "12",
+                    "Course Options": [],
+                    "Upper-Division Hours": "6"
+                },
+                "Core Courses": {
+                    "Hours": "28",
+                    "Course Options": [["SDS 313", "SDS 315", "SDS 431", "SDS 334", "SDS 336", "SDS 354", "SDS 357"]]
+                },
+                "Electives": {
+                    "Hours": "6",
+                    "Course Options": []
+                }
+            },
+            "Summary": {
+                "Total Hours": "120",
+                "Total In Residence Hours": "60",
+                "Total Upper Division Hours": "36"
+            }
+        },
+
+        "Physics": {
+            "Degree": "Bachelor of Science",
+            "Version": "2022-24",
+            "Skills & Experience Flags": {
+                "Writing Flag": {
+                    "Count": "2",
+                    "Courses": []
+                },
+                "Quantitative Reasoning Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Global Cultures Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Cultural Diversity in the U.S. Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Ethics and Leadership Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Independent Inquiry Flag": {
+                    "Count": "1",
+                    "Courses": []
+                }
+            },
+            "Foreign Language": {
+                "Hours": "6-12",
+                "Course Options": [
+                    ["Beginning level proficiency in a foreign language"],
+                    ["1 course in a foreign language", "1 course in the culture of the same language area"],
+                    ["1 course from a foreign culture area", "1 course from the same foreign culture area"]
+                ]
+            },
+            "Introductory Mathematics & Science": {
+                "Calculus": {
+                    "Hours": "8-12",
+                    "Course Options": [
+                        ["M 408C", "M 408D"],
+                        ["M 408N", "M 408S", "M 408M"]
+                    ]
+                },
+                "Physics": {
+                    "Hours": "12",
+                    "Course Options": [
+                        ["PHY 301", "PHY 101L", "PHY 316", "PHY 116L", "PHY 315", "PHY 115L"],
+                        ["PHY 301", "PHY 101L", "PHY 303L", "PHY 105N", "PHY 315", "PHY 115L"],
+                        ["PHY 303K", "PHY 105M", "PHY 316", "PHY 116L", "PHY 315", "PHY 115L"],
+                        ["PHY 303K", "PHY 105M", "PHY 303L", "PHY 105N", "PHY 315", "PHY 115L"]
+                    ]
+                },
+                "Chemistry I": {
+                    "Hours": "3",
+                    "Course Options": [["CH 301"], ["CH 301C"]]
+                },
+                "Chemistry II": {
+                    "Hours": "3",
+                    "Course Options": [["CH 302"], ["CH 302C"]]
+                }
+            },
+            "Option 2: Computation": {
+                "Additional Science": {
+                    "Hours": "6",
+                    "Course Options": ["BIO, GEO, or AST"],
+                    "Notes": "courses that cannot count toward major requirements in department that offers it cannot be applied"
+                },
+                "Upper Division Mathematics & Statistics and Data Sciences": {
+                    "Hours": "14",
+                    "Course Options": [
+                        ["M 427K", "M 427L", "6 additional hours of upper-division Mathematics or SDS"],
+                        ["M 427K", "M 427L", "6 additional hours of upper-division Mathematics or SDS"]
+                    ],
+                    "Notes": "SDS 329C and M 362K are recommended"
+                },
+                "Upper Division Physics": {
+                    "Hours": "24",
+                    "Course Options": [
+                        ["PHY 355", "PHY 338K", "PHY 353L", "PHY 336K", "PHY 352K", "PHY 329", "PHY 373", "PHY 369"]
+                    ],
+                    "Notes": "PHY 373 is prerequisite or co-requisite for PHY 369"
+                },
+                "Scientific Computational Specialization": {
+                    "Hours": "12",
+                    "Course Options": [
+                        [
+                            "CS 303E",
+                            "CS 313E or SDS 322",
+                            "2 courses from 2 areas listed below: Numerical methods: M 348; SDS 335; CS 323E, 323H, 367; CHE 348 Statistical Methods: M 358K, 378K; BME 335 Other computing topics: M 346, 362M, 368K, 372K, 376C; SDS 329D, 374C, 374D, 374E; CS 324E, 327E, 329E, 377; ME 367S"
+                        ],
+                        ["EE 306", "EE 312", "EE 316", "EE 319K", "EE 422C"],
+                        ["EE 306", "EE 312", "EE 316", "EE 319K"]
+                    ]
+                }
+            },
+            "Summary": {
+                "Total Hours": "126",
+                "Total In Residence Hours": "60",
+                "Total Upper Division Hours": "36",
+                "Total Upper Division Physics Hours": "12",
+                "Total Upper Division In Residence Hours": "21"
+            }
+        },
+
+        "Computer Science": {
+            "Degree": "Bachelor of Science",
+            "Version": "2022-24",
+            "Skills & Experience Flags": {
+                "Writing Flag": {
+                    "Count": "2",
+                    "Courses": []
+                },
+                "Quantitative Reasoning Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Global Cultures Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Cultural Diversity in the U.S. Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Ethics and Leadership Flag": {
+                    "Count": "1",
+                    "Courses": []
+                },
+                "Independent Inquiry Flag": {
+                    "Count": "1",
+                    "Courses": []
+                }
+            },
+            "Foreign Language": {
+                "Hours": "6-12",
+                "Course Options": [
+                    ["Beginning level proficiency in a foreign language"],
+                    ["1 course in a foreign language", "1 course in the culture of the same language area"],
+                    ["1 course from a foreign culture area", "1 course from the same foreign culture area"]
+                ]
+            },
+            "Introductory Science": {
+                "Calculus": {
+                    "Hours": "8-12",
+                    "Course Options": [
+                        ["M 408C", "M 408D"],
+                        ["M 408N", "M 408S", "M 408M"]
+                    ]
+                },
+                "Science I": {
+                    "Hours": "6-8",
+                    "Course Options": [
+                        ["BIO 311C", "BIO 311D"],
+                        ["BIO 315H", "BIO 325H"],
+                        ["CH 301", "CH 302"],
+                        ["CH 301C", "CH 302C"],
+                        ["CH 301", "CH 302C"],
+                        ["CH 301C", "CH 302"],
+                        ["PHY 303K", "PHY 105M", "PHY 303L", "PHY 105N"],
+                        ["PHY 301", "PHY 101L", "PHY 316", "PHY 116L"],
+                        ["PHY 317K", "PHY 105M", "PHY 317L", "PHY 105N"]
+                    ]
+                },
+                "Science II": {
+                    "Hours": "3-4",
+                    "Course Options": [
+                        ["GEO 303"],
+                        ["GEO 401"],
+                        ["Upper Division Mathematics (excluding M 325K, 340L, 341, and 362K)"]
+                    ]
+                }
+            },
+            "Computer Science": {
+                "Linear Algebra": {
+                    "Hours": "3",
+                    "Course Options": [["M 340L"], ["SDS 329C"], ["M 341"]]
+                },
+                "Probability": {
+                    "Hours": "3",
+                    "Course Options": [["SDS 321"], ["M 362K"]]
+                },
+                "Programming": {
+                    "Hours": "6",
+                    "Course Options": [
+                        ["C S 312", "C S 314"],
+                        ["C S 312", "C S 314H"]
+                    ]
+                },
+                "Theory": {
+                    "Hours": "6",
+                    "Course Options": [
+                        ["C S 311", "C S 331"],
+                        ["C S 311", "C S 331H"],
+                        ["C S 311H", "C S 331"],
+                        ["C S 311H", "C S 331H"]
+                    ]
+                },
+                "Systems": {
+                    "Hours": "6",
+                    "Course Options": [
+                        ["C S 429", "C S 439"],
+                        ["C S 429", "C S 439H"],
+                        ["C S 429H", "C S 439"],
+                        ["C S 429H", "C S 439H"]
+                    ]
+                },
+                "Additional Upper Divisions": {
+                    "Hours": "24",
+                    "Course Options": [],
+                    "Notes": ": 9 of the 24 upper-division CS hours are substituted for a 3rd course from approved lists in programming, theory, and systems"
+                }
+            },
+            "Summary": {
+                "Total Hours": "120",
+                "Total In Residence Hours": "60",
+                "Total Upper Division Hours": "42",
+                "Total Upper Division Computer Science Hours": "21"
+            }
+        }
+    },
+    "Certificates": {
+        "Elements of Computing": {
+            "Version": "2022-24",
+            "Core Courses": {
+                "Hours": "6",
+                "Course Options": ["C S 303E", "C S 313E"]
+            },
+            "Electives": {
+                "Hours": "12",
+                "Course Options": ["C S 323E", "C S 324E", "C S 326E", "C S 327E", "C S 329E", " C S 330E", "C S 331E"]
+            }
+        },
+        "Quantum Information Science": {
+            "Version": "2022-24",
+            "Core Courses": {
+                "Hours": "6",
+                "Course Options": ["C S 309.1", "C S 378.1", "C S 358H"]
+            },
+            "Electives": {
+                "Hours": "12",
+                "Course Options": [
+                    "PHY 373",
+                    "PHY 362K",
+                    "C S 331",
+                    "C S 358H",
+                    "M 340L",
+                    "M 346",
+                    "PHY 371C",
+                    "C S 370",
+                    "M 375C"
+                ]
+            }
+        }
+    }
+}
