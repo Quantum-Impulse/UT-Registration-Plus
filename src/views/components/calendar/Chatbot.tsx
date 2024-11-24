@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
-
 import type { CalendarTabMessages } from '@shared/messages/CalendarMessages';
 import type { Course } from '@shared/types/Course';
 import CalendarBottomBar from '@views/components/calendar/CalendarBottomBar';
-import ChatbotHeader from '@views/components/calendar/ChatbotHeader';
 import CalendarHeader from '@views/components/calendar/CalendarHeader';
 import { CalendarSchedules } from '@views/components/calendar/CalendarSchedules';
+import ChatbotHeader from '@views/components/calendar/ChatbotHeader';
 import ImportantLinks from '@views/components/calendar/ImportantLinks';
 import Divider from '@views/components/common/Divider';
+import Text from '@views/components/common/Text/Text';
 import CourseCatalogInjectedPopup from '@views/components/injected/CourseCatalogInjectedPopup/CourseCatalogInjectedPopup';
 import { CalendarContext } from '@views/contexts/CalendarContext';
 import useCourseFromUrl from '@views/hooks/useCourseFromUrl';
 import { useFlattenedCourseSchedule } from '@views/hooks/useFlattenedCourseSchedule';
 import { MessageListener } from 'chrome-extension-toolkit';
-import Text from '@views/components/common/Text/Text';
+import React, { useEffect, useState } from 'react';
 
 import CalendarFooter from './CalendarFooter';
 import TeamLinks from './TeamLinks';
@@ -55,10 +54,10 @@ export default function Chatbot(): JSX.Element {
                     )}
                     <div className='h-full min-w-5xl flex flex-grow flex-col overflow-y-auto'>
                         <iframe
-                            src="https://llama2.streamlit.app?embed=true"
-                            className="chatbot-iframe w-full h-full border-none"
-                            style={{height: '100%', width: '100%'}}
-                        ></iframe>
+                            src='https://llama2.streamlit.app?embed=true'
+                            className='chatbot-iframe h-full w-full border-none'
+                            style={{ height: '100%', width: '100%' }}
+                        />
                         {/* <div className='min-h-2xl flex-grow overflow-auto pl-2 pr-4 pt-6 screenshot:min-h-xl'>
                             <CalendarGrid courseCells={courseCells} setCourse={setCourse} />
                         </div> */}
