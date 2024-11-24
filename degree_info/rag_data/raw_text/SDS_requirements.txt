@@ -1,0 +1,39 @@
+Bachelor of Science in Statistics and Data Science
+On This Page
+Prescribed Work
+Special Requirements
+The Bachelor of Science in Statistics and Data Science (SDS) provides students with foundational training and marketable skills in statistics and data science. The curriculum is designed to equip students to execute all stages of a data analysis, from data acquisition and exploration to application of statistics and machine learning methods to the creation of data products (e.g, reports, apps, dashboards). Throughout the program, students are exposed to the principles of and tools for conducting reproducible data science and are taught to think critically about relevant ethical and legal issues (e.g., data privacy, algorithmic bias, misrepresentation of findings). The program prepares students to enter the workforce directly, or after pursuing specialized graduate training, as statisticians and data scientists or in other roles where training in these fields is excellent preparation.
+
+Prescribed Work
+In the process of fulfilling degree requirements, all students must complete:
+
+Core curriculum
+Skills and experience flags:
+Writing: two flagged courses beyond Rhetoric and Writing 306 or its equivalent, including one at the upper-division level
+Quantitative reasoning: one flagged course
+Global cultures: one flagged course
+Cultural diversity in the United States: one flagged course
+Ethics: one flagged course
+Independent inquiry: one flagged course
+​Courses that may be used to fulfill flag requirements are identified in the Course Schedule. They may be used simultaneously to fulfill other requirements, unless otherwise specified. Please note, students may not earn the cultural diversity in the United States and the global cultures flags from the same course. Students are encouraged to discuss options with their academic advisors.
+
+At least 21 hours of upper-division course work in Statistics and Data Sciences must be completed in residence at the university.
+Mathematical and computational foundations (14 hours minimum depending on calculus sequence, including three upper division)
+Calculus: Mathematics 408C and 408D; 408K, 408L, and 408M; or 408N, 408S, and 408M
+Linear algebra: Mathematics 340L or 341
+Introduction to programming: Computer Science 303E or 312, or an equivalent Computer Science course
+Introduction to Databases: Computer Science 327E or an equivalent Computer Science course
+Breadth Requirement: At least 12 hours, including at least six upper-division hours, in a single field of study other than Statistics and Data Sciences.
+The following courses in Statistics and Data Sciences:
+Core courses for the major:
+Statistics and Data Sciences 313, Introduction to Data Science
+Statistics and Data Sciences 315, Statistical Thinking
+Statistics and Data Sciences 431, Probability and Statistical Inference
+Statistics and Data Sciences 334, Intermediate Statistical Methods 
+Statistics and Data Sciences 336, Practical Machine Learning 
+Statistics and Data Sciences 354, Advanced Statistical Methods 
+Statistics and Data Sciences 357, Case Studies in Data Science
+Six additional credit hours from an approved list of courses
+Enough additional coursework to make a total of 120 semester hours.
+Special Requirements
+Students must fulfill both the University's general requirements for graduation and the college requirements. They must also earn a grade of at least C- in all courses required for the major, and a grade point average in these courses of at least 2.00. More information about grades and the grade point average is given in the General Information Catalog.

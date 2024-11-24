@@ -19,14 +19,20 @@ export default function Chatbot(): JSX.Element {
 
     // Initialize LangflowClient
     useEffect(() => {
+        console.log('Initializing LangflowClient...');
         const flowIdOrName = 'd12d512b-6bd2-4193-81ef-0482d134b1e2';
         const langflowId = 'c4e8ea98-f0a9-4484-8dc3-1ee2411974b2';
-        const applicationToken = 'AstraCS:DyHaWSMFOpQMUpHnQtXRWIjZ:4b9a0694663749a1fba22300a9fcb8adcb6b7772027208943b9b300ea3e6a3c3';
+        const applicationToken =
+            'AstraCS:DyHaWSMFOpQMUpHnQtXRWIjZ:4b9a0694663749a1fba22300a9fcb8adcb6b7772027208943b9b300ea3e6a3c3';
 
         if (flowIdOrName && langflowId && applicationToken) {
-            const client = new LangflowClient('https://api.langflow.astra.datastax.com', applicationToken, flowIdOrName);
-            client.flowIdOrName = flowIdOrName; // Ensure it's a valid string
-            client.langflowId = langflowId; // Ensure it's a valid string
+            console.log('LangflowClient parameters are valid.');
+            const client = new LangflowClient(
+                'https://api.langflow.astra.datastax.com',
+                applicationToken,
+                flowIdOrName
+            );
+            console.log('LangflowClient created:', client);
             setLangflowClient(client);
             console.log("LangflowClient initialized:", client);
 
@@ -56,17 +62,17 @@ export default function Chatbot(): JSX.Element {
             const outputType = 'chat';
             const stream = false;
             const tweaks = {
-                "ChatInput-BvjFl": {},
-                "ParseData-4Y2L2": {},
-                "Prompt-DBtT3": {},
-                "SplitText-xpNjv": {},
-                "OpenAIModel-5tJZz": {},
-                "ChatOutput-dsgze": {},
-                "AstraDB-RE6GM": {},
-                "OpenAIEmbeddings-I2Yan": {},
-                "AstraDB-w3fJi": {},
-                "OpenAIEmbeddings-xChef": {},
-                "File-M3Krg": {},
+                'ChatInput-BvjFl': {},
+                'ParseData-4Y2L2': {},
+                'Prompt-DBtT3': {},
+                'SplitText-xpNjv': {},
+                'OpenAIModel-5tJZz': {},
+                'ChatOutput-dsgze': {},
+                'AstraDB-RE6GM': {},
+                'OpenAIEmbeddings-I2Yan': {},
+                'AstraDB-w3fJi': {},
+                'OpenAIEmbeddings-xChef': {},
+                'File-M3Krg': {},
             };
 
             const response = await langflowClient.runFlow(
@@ -77,15 +83,15 @@ export default function Chatbot(): JSX.Element {
                 outputType,
                 tweaks,
                 stream,
-                (data) => {
+                data => {
                     const botMessage = data.chunk;
-                    setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: botMessage }]);
+                    setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: botMessage }]);
                 },
-                (message) => {
+                message => {
                     console.log('Stream Closed:', message);
                     setIsLoading(false);
                 },
-                (error) => {
+                error => {
                     console.error('Stream Error:', error);
                     setIsLoading(false);
                 }
@@ -93,11 +99,14 @@ export default function Chatbot(): JSX.Element {
 
             if (!stream && response && response.outputs) {
                 const flowOutputs = response.outputs[0];
-                const firstComponentOutputs = flowOutputs.outputs[0];
-                const output = firstComponentOutputs.outputs.message;
-
-                const botMessage = output.message.text;
-                setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: botMessage }]);
+                if (flowOutputs.outputs && flowOutputs.outputs.message) {
+                    const botMessage = flowOutputs.outputs.message.text;
+                    setMessages(prevMessages => [...prevMessages, { sender: 'bot', text: botMessage }]);
+                } else {
+                    console.error('No message in flow outputs:', flowOutputs);
+                }
+            } else {
+                console.error('Non-streaming response failed:', response);
             }
 
             setIsLoading(false);
@@ -109,9 +118,7 @@ export default function Chatbot(): JSX.Element {
 
     return (
         <div className='h-full w-full flex flex-col'>
-            <ChatbotHeader
-                onSidebarToggle={() => setShowSidebar(!showSidebar)}
-            />
+            <ChatbotHeader onSidebarToggle={() => setShowSidebar(!showSidebar)} />
             <div className='h-full flex overflow-auto pl-3'>
                 {showSidebar && (
                     <div className='h-full flex flex-none flex-col justify-between pb-5 screenshot:hidden'>
@@ -141,8 +148,13 @@ export default function Chatbot(): JSX.Element {
                             <input
                                 type='text'
                                 value={inputValue}
+<<<<<<< Updated upstream
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyUp={(e) => {
+=======
+                                onChange={e => setInputValue(e.target.value)}
+                                onKeyPress={e => {
+>>>>>>> Stashed changes
                                     if (e.key === 'Enter') {
                                         e.preventDefault();
                                         handleSendMessage();
