@@ -19,14 +19,11 @@ const TabView = () => {
     return (
         <div className='tabview-container'>
             <div className='tabs flex space-x-4 justify-center items-center'>
-                {/* <Text variant='h2' className='text-nowrap'>
-                    OPTIONS
-                </Text> */}
                 <Button variant='single' color='theme-red' className='calendar-btn' onClick={() => setActiveTab('calendar')}>
-                    Calendar
+                    Calendar 🗓️
                 </Button>
                 <Button variant='single' color='theme-red' className='chatbot-btn' onClick={() => setActiveTab('chatbot')}>
-                    AI Advisor Assistant
+                    AI Advisor Assistant 🤖
                 </Button>
             </div>
 

@@ -5,6 +5,7 @@ import Divider from '@views/components/common/Divider';
 
 import CalendarFooter from './CalendarFooter';
 import TeamLinks from './TeamLinks';
+import ImportantLinks from '@views/components/calendar/ImportantLinks';
 
 import '@views/components/calendar/LangflowBot.css';
 
@@ -27,6 +28,8 @@ export default function Chatbot(): JSX.Element {
             client.flowIdOrName = flowIdOrName; // Ensure it's a valid string
             client.langflowId = langflowId; // Ensure it's a valid string
             setLangflowClient(client);
+            console.log("LangflowClient initialized:", client);
+
         } else {
             console.error('Required parameters for LangflowClient are missing.');
         }
@@ -113,6 +116,7 @@ export default function Chatbot(): JSX.Element {
                 {showSidebar && (
                     <div className='h-full flex flex-none flex-col justify-between pb-5 screenshot:hidden'>
                         <div className='mb-3 h-full w-fit flex flex-col overflow-auto pb-2 pl-4.5 pr-4 pt-5'>
+                            <ImportantLinks />
                             <Divider orientation='horizontal' size='100%' className='my-5' />
                             <TeamLinks />
                         </div>
@@ -138,7 +142,7 @@ export default function Chatbot(): JSX.Element {
                                 type='text'
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
-                                onKeyPress={(e) => {
+                                onKeyUp={(e) => {
                                     if (e.key === 'Enter') {
                                         e.preventDefault();
                                         handleSendMessage();
@@ -146,7 +150,7 @@ export default function Chatbot(): JSX.Element {
                                 }}
                                 className='flex-grow'
                             />
-                            <button onClick={handleSendMessage}>Send</button>
+                            <button className="chatbot-send-button" onClick={handleSendMessage}>Send</button>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
 }
 
 .chatbot-send-button {
-    background-color: #ff5722; /* Customize button color */
+    background-color: #bf5700; /* Customize button color */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -25,5 +25,5 @@
 }
 
 .chatbot-send-button:hover {
-    background-color: #ff7043; /* Hover effect */
+    background-color: #bf5700; /* Hover effect */
 }
